@@ -1,0 +1,42 @@
+{{#if isEditing}}
+    {{partial 'post/edit'}}
+    <button {{action 'doneEditing'}}>Done</button>
+{{else}}
+    <button {{action 'edit'}}>Edit</button>
+{{/if}}
+
+<h3>{{cube_id}}</h3>
+<hr>
+<ul>
+<div class="below-the-fold">
+<li>camera {{camera}}</li>
+<li>created {{date created}}</li>
+<li>type {{image_type}}</li>
+<li>order {{order}}</li>
+<li>author {{author}}</li>
+<li>comment {{comment}}</li>
+<li>meters {{meters}}</li>
+{{#if m1_hole}}
+meter #1
+<ul>
+<li>hole {{m1_hole}}</li>
+<li>project {{m1_project}}</li>
+<li>from {{m1_from}}</li>
+<li>to {{m1_to}}</li>
+<li>unit {{m1_unit}}</li>
+</ul>
+{{else}}
+This cube has no meters.
+{{/if}}
+{{#if m2_hole}}
+meter #2
+<ul>
+<li>hole {{m2_hole}}</li>
+<li>project {{m2_project}}</li>
+<li>from {{m2_from}}</li>
+<li>to {{m2_to}}</li>
+<li>unit {{m2_unit}}</li>
+</ul>
+{{/if}}
+</ul>
+</div>

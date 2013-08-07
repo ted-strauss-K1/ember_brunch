@@ -1,0 +1,16 @@
+{{#if isEditing}}
+    {{partial 'post/edit'}}
+    <button {{action 'doneEditing'}}>Done</button>
+{{else}}
+    <button {{action 'edit'}}>Edit</button>
+{{/if}}
+
+<h3>{{order_id}}</h3>
+<hr>
+<ul>
+<div class="below-the-fold">
+<li>camera {{name}}</li>
+<li>created by {{author}}</li>
+<li>created {{date created}}</li>
+</ul>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+            {{#linkTo 'index' class='brand'}}Webby{{/linkTo}}
+            <ul class="nav">
+                <li>{{#linkTo 'orders'}}Orders{{/linkTo}}</li>
+                <li>{{#linkTo 'cubes'}}Cubes{{/linkTo}}</li>
+                <li>{{#linkTo 'posts'}}Posts{{/linkTo}}</li>
+                <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div>
+	{{outlet}}
+</div>
+<ul>
+  {{#each item in content}}
+    <li>{{item}}</li>
+  {{/each}}
+</ul>
